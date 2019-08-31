@@ -9,33 +9,17 @@ import About from './Components/Pages/About';
 // import Contact from './Components/Pages/Contact';
 // import NotFound from './Components/Pages/NotFound';
 
-const routing = (
+ReactDOM.render(
     <Router>
-      <div>
-
-        {/* <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/users">Users</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul> */}
+        <App />
         <Switch>
-            <Route path="/" component={App} />
-            {/* <Route path="/About" component={About} />
-            <Route path="/Services" component={Services} />
-            <Route path="/Testimonials" component={Testimonials} />
-            <Route path="/Contact" component={Contact} />
-            <Route component={Notfound} /> */}
+            <Route exact path="/About" component={About} />
+            {/* <Route path="/Services" component={Services} /> */}
+            {/* <Route path="/Testimonials" component={Testimonials} /> */}
+            {/* <Route path="/Contact" component={Contact} /> */}
+            {/* <Route component={Notfound} /> */}
         </Switch>
-      </div>
-    </Router>
-  )
-
-ReactDOM.render(routing, document.getElementById('root'))
+  </Router>, 
+  document.getElementById('root'))
 
 // ReactDOM.render(<App />, document.getElementById('root'));
