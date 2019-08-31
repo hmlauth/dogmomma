@@ -1,30 +1,32 @@
 import React, { Fragment } from 'react';
 import NavBar from './Components/NavBar';
-import Home from './Components/Pages/Home';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { withStyles } from "@material-ui/core/styles";
+
+const styles = theme => ({
+	"@global": {
+		body: {
+			backgroundImage: "url('/images/dog_dalmation_pink.jpeg')",
+			backgroundRepeat: "no-repeat",
+			backgroundPosition: "center center",
+			backgroundSize: "cover",
+			backgroundAttachment: "fixed",
+			height: "100%"
+		},
+		html: {
+			height: "100%"
+		}
+	}
+});
 
 function App() {
   return (
-   <Fragment>
-      <NavBar />
-      <Home />
-   </Fragment>
+      <Fragment>
+        <CssBaseline />
+          <NavBar />
+      </Fragment>    
   );
 }
-
-export default App;
-
-
-{/* <Route path="/About" component={HomePage} /> */}
+export default withStyles(styles)(App);
 
 
-// import Home from './Components/Pages/Home';
-// import About from './Components/Pages/About';
-// import Services from './Components/Pages/Services';
-// import Testimonials from './Components/Pages/Testimonials';
-// import Contact from './Components/Pages/Contact';
-// import { Router, Route } from "react-router-dom";
-// <Route exact path="/" component={Home} />
-// <Route exact path="/About" component={About} />
-// <Route exact path="/Services" component={Services} />
-// <Route exact path="/Testimonials" component={Testimonials} />
-// <Route exact path="/Contact" component={Contact} />
