@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 // import NavBar from './Components/NavBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { withStyles } from "@material-ui/core/styles";
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
@@ -10,14 +10,15 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
+import ContactIcon from '@material-ui/icons/SupervisedUserCircle';
 import PetsIcon from '@material-ui/icons/Pets';
 import StarIcon from '@material-ui/icons/StarBorderRounded';
 import HomeIcon from '@material-ui/icons/HomeRounded';
 import Image from './Components/Image';
+import AppBar from './Components/AppBar';
 
 const navList = ['About', 'Services', 'Testimonials', 'Contact'];
-const icons = [<HomeIcon />, <PetsIcon />, <StarIcon />, <SupervisedUserCircleIcon />];
+const icons = [<HomeIcon />, <PetsIcon />, <StarIcon />, <ContactIcon />];
 
 const useStyles = makeStyles({
   list: {
@@ -39,9 +40,9 @@ const useStyles = makeStyles({
       color: '#F8B4B4'
   },
   image: {
-      position: 'relative',
+      position: 'fixed',
       left: '30px',
-      bottom: '-325px'
+      bottom: '0px'
   }
 });
 
@@ -101,8 +102,7 @@ function App() {
   return (
       <Fragment>
         <CssBaseline />
-          {/* <NavBar /> */}
-          <Button onClick={toggleDrawer('left', true)} className={classes.menu}>Menu</Button>
+          <AppBar onClick={toggleDrawer} />
           <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
             {sideList('left')}
           </Drawer>

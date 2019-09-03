@@ -1,21 +1,44 @@
 import React, { Fragment } from 'react';
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button';
+import { makeStyles } from '@material-ui/core/styles';
+import { Container } from '@material-ui/core';
+import { CardContent } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import PageCard from '../PageCard';
 
-export default function About() {
+const paragraphs = [
+    "Every since I can remember, Megan has loved animals. While others would kill a spider upon sight, she would calmly pick it up, place it on a neighboring plant and say, 'Live a long life, spider' with the utmost compassion, care and sincerity.", 
+    "She is full of more empathy and energy that most of us combined. If you're looking for someone to love your and care for your animals in your absence, she's your girl.", 
+    "From Lake Forest Park."];
+
+const useStyles = makeStyles(theme => ({
+    testimonials: {
+        marginTop: '1em'
+    }
+}));
+
+export default function Testimonials() {
+    const classes = useStyles();
+    
     return (
         <Fragment>
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-        </Card>
+            <Container fluid>
+            <PageCard 
+                title='About Me' 
+                subheader=" 'They're so cute!' "
+            >
+                <CardContent>
+                    {paragraphs.map(paragraph => (
+                            <Typography 
+                                variant="body2" 
+                                color="textSecondary" 
+                                component='p'
+                                className={classes.paragraph}>
+                                    {paragraph}
+                            </Typography>
+                    ))}   
+                </CardContent>
+            </ PageCard>
+            </Container>
         </Fragment>
     )
 }
