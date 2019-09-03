@@ -13,6 +13,9 @@ const useStyles = makeStyles(theme => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    '&:focus': {
+      outline: 'none'
+    }
   },
   custom: {
     backgroundColor: '#F8B4B4',
@@ -33,7 +36,7 @@ export default function DenseAppBar(props) {
       <AppBar position="static">
         <Toolbar variant="dense" className={classes.custom}>
           <IconButton onClick={props.onClick('left', true)} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
+            <MenuIcon className={classes.menuButton}/>
           </IconButton>
           <Typography variant="h6" color="inherit">
             <Link to='/' className={classes.custom}>

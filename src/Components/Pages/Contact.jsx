@@ -1,3 +1,4 @@
+
 import React, { Fragment } from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
@@ -12,6 +13,7 @@ import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+import SubmitBtn from '../SubmitBtn';
 
 // const GreenCheckbox = withStyles({
 //     root: {
@@ -42,28 +44,37 @@ const useStyles = makeStyles(theme => ({
   }));
 
 export default function Contact() {
+
     const classes = useStyles();
+
     const [values, setValues] = React.useState({
-        name: 'Cat in the Hat',
-        age: '',
-        multiline: 'Controlled',
-        currency: 'EUR',
+        firstName: '',
+        lastName: '',
+        email: '',
+        services: [],
+        message: ''    
     });
 
+    const [state, setState] = React.useState({
+        checkedA: false,
+        checkedB: false,
+        checkedC: false,
+        checkedH: false,
+      });
+
     const handleTextChange = name => event => {
+        console.log('name', name)
         setValues({ ...values, [name]: event.target.value });
     };
 
-    const [state, setState] = React.useState({
-        checkedA: true,
-        checkedB: true,
-        checkedC: true,
-        checkedH: true,
-      });
-    
-      const handleCheckboxChange = name => event => {
+    const handleCheckboxChange = name => event => {
         setState({ ...state, [name]: event.target.checked });
-      };
+    };
+
+    const handleSubmit = () => {
+        console.log('I was clicked!');
+        console.log(state, values);
+    }
 
     return (
         <Fragment>
@@ -73,6 +84,7 @@ export default function Contact() {
                     subheader="Expect a response within 24 - 48 hours!"
                 >
                     <CardContent>
+                        <form action="hannalauth@gmail.com" method="post" enctype="text/plain">
                         <TextField
                             required
                             id="outlined-required"
@@ -80,6 +92,7 @@ export default function Contact() {
                             className={classes.textField}
                             margin="normal"
                             variant="outlined"
+                            onChange={handleTextChange('firstName')}
                         />
                          <TextField
                             required
@@ -88,6 +101,7 @@ export default function Contact() {
                             className={classes.textField}
                             margin="normal"
                             variant="outlined"
+                            onChange={handleTextChange('lastName')}
                         />
                         <TextField
                             required
@@ -99,6 +113,7 @@ export default function Contact() {
                             autoComplete="email"
                             margin="normal"
                             variant="outlined"
+                            onChange={handleTextChange('email')}
                         />
                         <FormControlLabel
                             control={
@@ -147,9 +162,16 @@ export default function Contact() {
                             margin="normal"
                             variant="outlined"
                             InputLabelProps={{
-                                shrink: true,
+                                shrink: true
                             }}
+                            onChange={handleTextChange('message')}
                         />
+                        </form>
+                        <div onClick={handleSubmit}>
+                            <SubmitBtn>
+                                Submit
+                            </SubmitBtn>
+                        </div>
                     </CardContent>
                 </ PageCard>
             </Container>

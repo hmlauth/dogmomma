@@ -11,7 +11,7 @@ const paragraphs = [
     "From Lake Forest Park."];
 
 const useStyles = makeStyles(theme => ({
-    testimonials: {
+    paragraph: {
         marginTop: '1em'
     }
 }));
