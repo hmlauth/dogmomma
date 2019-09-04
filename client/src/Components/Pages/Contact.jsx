@@ -108,7 +108,7 @@ export default function Contact() {
                     subheader="Expect a response within 24 - 48 hours!"
                 >
                     <CardContent>
-                        <form action="hannalauth@gmail.com" method="post" enctype="text/plain">
+                        <form method="post">
                         <TextField
                             required
                             id="outlined-required"

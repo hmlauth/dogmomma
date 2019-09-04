@@ -20,6 +20,7 @@
 11. Make home page more interesting
 12. Different navbar in full screen mode
 13. Add links to icons
+14. VALIDATE EMAIL
 
 PRIORITITES:
  -- Carousel for testimonials
