@@ -6,6 +6,7 @@
 3. iPad pro user interface
 4. User interface for megs - admin so she can change out photos, testimonials, modify site in ways she wants too, update contact information
 5. Contact page
+    - Phone number/text Ok? 
     - Dates
     - Other services
     - Contact you or provide them with your number? or both?
