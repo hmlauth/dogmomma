@@ -1,5 +1,5 @@
 
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 import PageCard from '../PageCard';
@@ -15,18 +15,9 @@ import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import SubmitBtn from '../SubmitBtn';
 import axios from 'axios';
-import { checkServerIdentity } from 'tls';
+import MyTextField from '../TextField';
+console.log(MyTextField);
 
-// const GreenCheckbox = withStyles({
-//     root: {
-//       color: 'light grey',
-//       '&$checked': {
-//         color: 'black',
-//       },
-//     },
-//     checked: {},
-//   })(props => <Checkbox color="default" {...props} />);
-  
 const useStyles = makeStyles(theme => ({
     container: {
       display: 'flex',
@@ -45,61 +36,86 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-export default function Contact() {
-
-    const classes = useStyles();
-
-    const [values, setValues] = React.useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        message: ''    
-    });
-
-    const [state, setState] = React.useState({
-        dogWalking: false,
-        overNight: false,
-        transportation: false,
-        specialCare: false,
-      });
-
-    const handleTextChange = name => event => {
-        setValues({ ...values, [name]: event.target.value });
-    };
-
-    const handleCheckboxChange = name => event => {
-        setState({ ...state, [name]: event.target.checked });
-    };
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        console.log('I was clicked!');
-        // console.log(state, values);
-        const { firstName, lastName, email, message } = values;
-        const currentState = state;
-        console.log(currentState)
-
-        let checkedServices = [];
-        for (var item in currentState) {
-            console.log(currentState[item])
-            if (currentState[item]) {
-                checkedServices.push(item)
-            }
-        }
-        console.log(checkedServices);
-        const formSubmission = {
-            firstName, 
-            lastName, 
-            email, 
-            message,
-            checkedServices,
-        }
-        console.log(formSubmission);
-
-        const form = await axios.post('/api/contact', formSubmission);
+export default class Contact extends Component {
+    
+    constructor(props){
+        super(props)
         
+        this.state = {
+            firstName: '',
+            lastName: '',
+            email: '',
+            message: '',
+            dogWalking: false,
+            overNight: false,
+            transportation: false,
+            specialCare: false,
+            emailValid: true,
+            validationError: ''
+        }
     }
 
+    classes = useStyles => useStyles();
+
+    handleTextChange = name => event => {
+        const { value } = event.target;
+        this.setState({[name]: value})
+    };
+
+    handleCheckboxChange = name => event => {
+        this.setState({[name]: event.target.checked } );
+    };
+
+    handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const isEmailValid = await this.validateEmail(this.state.email);
+
+        if (isEmailValid) {
+
+            this.setState({
+                validationError: '', 
+                emailValid: true
+            });
+
+            const { firstName, lastName, email, message } = this.state;
+        
+            let services = [];
+            for (var item in this.state) {
+                if (
+                    (item === 'dogWalking' && this.state[item]) || 
+                    (item === 'overNight' && this.state[item]) || 
+                    (item === 'transportation' && this.state[item]) || 
+                    (item === 'specialCare' && this.state[item])
+                    ) {
+                    services.push(item)
+                } 
+            }
+            const formSubmission = {
+                firstName, 
+                lastName, 
+                email, 
+                message,
+                services,
+            }
+            console.log(formSubmission);
+    
+            const form = await axios.post('/api/contact', formSubmission);
+        } else {
+            this.setState({
+                validationError: 'Please enter a valid email.', 
+                emailValid: false
+            })
+        }   
+    }
+
+    validateEmail = email => {
+        console.log('....validation', email);
+        return email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+    }
+
+render() {
+    console.log(this.state)
     return (
         <Fragment>
             <Container fluid>
@@ -110,39 +126,41 @@ export default function Contact() {
                     <CardContent>
                         <form method="post">
                         <TextField
-                            required
+                            required={true}
                             id="outlined-required"
                             label="First Name"
-                            className={classes.textField}
-                            margin="normal"
-                            variant="outlined"
-                            onChange={handleTextChange('firstName')}
+                            margin='normal'
+                            variant='outlined'
+                            className={this.classes.textField}
+                            onChange={this.handleTextChange('firstName')}
+                            value={this.state.firstName}
                         />
                          <TextField
                             required
                             id="outlined-required"
                             label="Last Name"
-                            className={classes.textField}
+                            className={this.classes.textField}
                             margin="normal"
                             variant="outlined"
-                            onChange={handleTextChange('lastName')}
+                            onChange={this.handleTextChange('lastName')}
+                            value={this.state.lastName}
                         />
                         <TextField
                             required
                             id="outlined-email-input"
                             label="Email"
-                            className={classes.textField}
+                            className={this.classes.textField}
                             type="email"
-                            name="email"
                             autoComplete="email"
                             margin="normal"
                             variant="outlined"
-                            onChange={handleTextChange('email')}
+                            onChange={this.handleTextChange('email')}
+                            value={this.state.email}
                         />
                         <FormControlLabel
                             control={
                                 <Checkbox
-                                    onChange={handleCheckboxChange('dogWalking')}
+                                    onChange={this.handleCheckboxChange('dogWalking')}
                                     value="dogWalking"
                                 />
                             }
@@ -151,7 +169,7 @@ export default function Contact() {
                         <FormControlLabel
                             control={
                                 <Checkbox
-                                    onChange={handleCheckboxChange('overNight')}
+                                    onChange={this.handleCheckboxChange('overNight')}
                                     value="overNight"
                                 />
                             }
@@ -160,7 +178,7 @@ export default function Contact() {
                         <FormControlLabel
                             control={
                                 <Checkbox
-                                    onChange={handleCheckboxChange('transportation')}
+                                    onChange={this.handleCheckboxChange('transportation')}
                                     value="transportation"
                                 />
                             }
@@ -177,21 +195,19 @@ export default function Contact() {
                             label="Special Care"
                         />
                         <TextField
+                            required
                             id="outlined-full-width"
                             label="Anything else I should know?"
                             style={{ margin: 8 }}
-                            placeholder=""
-                            helperText=""
                             fullWidth
                             margin="normal"
                             variant="outlined"
-                            InputLabelProps={{
-                                shrink: true
-                            }}
-                            onChange={handleTextChange('message')}
+                            InputLabelProps={{shrink: true}}
+                            onChange={this.handleTextChange('message')}
+                            value={this.state.message}
                         />
                         </form>
-                        <div onClick={handleSubmit}>
+                        <div onClick={this.handleSubmit}>
                             <SubmitBtn>
                                 Submit
                             </SubmitBtn>
@@ -201,4 +217,5 @@ export default function Contact() {
             </Container>
         </Fragment>
     )
+    }
 }

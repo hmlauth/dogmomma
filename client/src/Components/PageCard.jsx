@@ -77,7 +77,7 @@ export default function PageCard(props) {
     
     return (
         <Fragment>
-            <Container fluid>
+            <Container fluid >
                 <Card className={classes.root}>
                     <CardHeader 
                         className={classes.header} 

@@ -40,7 +40,7 @@ export default function DenseAppBar(props) {
           </IconButton>
           <Typography variant="h6" color="inherit">
             <Link to='/' className={classes.custom}>
-                DogNanna
+                PAWMA
             </Link>
           </Typography>
         </Toolbar>

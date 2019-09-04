@@ -21,7 +21,7 @@ app.post('/api/contact', (req, res) => {
             <h3>Message</h3>
             <p>${req.body.message}<p/>
             <h3>Requested Services</h3>
-            <p>${req.body.checkedServices.join(', ')}<p/>
+            <p>${req.body.services.join(', ')}<p/>
         `;
 
         let transporter = nodemailer.createTransport({
