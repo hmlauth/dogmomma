@@ -14,6 +14,8 @@ import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import SubmitBtn from '../SubmitBtn';
+import axios from 'axios';
+import { checkServerIdentity } from 'tls';
 
 // const GreenCheckbox = withStyles({
 //     root: {
@@ -51,19 +53,17 @@ export default function Contact() {
         firstName: '',
         lastName: '',
         email: '',
-        services: [],
         message: ''    
     });
 
     const [state, setState] = React.useState({
-        checkedA: false,
-        checkedB: false,
-        checkedC: false,
-        checkedH: false,
+        dogWalking: false,
+        overNight: false,
+        transportation: false,
+        specialCare: false,
       });
 
     const handleTextChange = name => event => {
-        console.log('name', name)
         setValues({ ...values, [name]: event.target.value });
     };
 
@@ -71,9 +71,33 @@ export default function Contact() {
         setState({ ...state, [name]: event.target.checked });
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
         console.log('I was clicked!');
-        console.log(state, values);
+        // console.log(state, values);
+        const { firstName, lastName, email, message } = values;
+        const currentState = state;
+        console.log(currentState)
+
+        let checkedServices = [];
+        for (var item in currentState) {
+            console.log(currentState[item])
+            if (currentState[item]) {
+                checkedServices.push(item)
+            }
+        }
+        console.log(checkedServices);
+        const formSubmission = {
+            firstName, 
+            lastName, 
+            email, 
+            message,
+            checkedServices,
+        }
+        console.log(formSubmission);
+
+        const form = await axios.post('/api/contact', formSubmission);
+        
     }
 
     return (
@@ -118,8 +142,8 @@ export default function Contact() {
                         <FormControlLabel
                             control={
                                 <Checkbox
-                                    onChange={handleCheckboxChange('checkedA')}
-                                    value="checkedA"
+                                    onChange={handleCheckboxChange('dogWalking')}
+                                    value="dogWalking"
                                 />
                             }
                             label="Dog Walking"
@@ -127,17 +151,17 @@ export default function Contact() {
                         <FormControlLabel
                             control={
                                 <Checkbox
-                                    onChange={handleCheckboxChange('checkedB')}
-                                    value="checkedB"
+                                    onChange={handleCheckboxChange('overNight')}
+                                    value="overNight"
                                 />
                             }
-                            label="Sleep Over"
+                            label="Over Night"
                         />
                         <FormControlLabel
                             control={
                                 <Checkbox
-                                    onChange={handleCheckboxChange('checkedC')}
-                                    value="checkedC"
+                                    onChange={handleCheckboxChange('transportation')}
+                                    value="transportation"
                                 />
                             }
                             label="Transportation"
@@ -147,7 +171,7 @@ export default function Contact() {
                                 <Checkbox 
                                     icon={<FavoriteBorder />} 
                                     checkedIcon={<Favorite />} 
-                                    value="checkedH" 
+                                    value="specialCare" 
                                 />
                             }
                             label="Special Care"
