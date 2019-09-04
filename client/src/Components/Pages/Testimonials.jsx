@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 import PageCard from '../PageCard';
 import { CardContent } from '@material-ui/core';
@@ -12,14 +12,14 @@ const testimonials = [
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
 ];
 
-const useStyles = makeStyles(theme => ({
-    testimonials: {
-        marginTop: '2em'
-    }
-}));
+// const useStyles = makeStyles(theme => ({
+//     testimonials: {
+//         marginTop: '2em'
+//     }
+// }));
 
 export default function Testimonials() {
-    const classes = useStyles();
+    // const classes = useStyles();
     
     return (
         <Fragment>
@@ -30,12 +30,6 @@ export default function Testimonials() {
             >
                 <CardContent>
                     <MyCarousel testimonials={testimonials} />
-                    {/* {testimonials.map(testimonial => (
-                        <div className={classes.testimonials}>
-                            <img src='https://via.placeholder.com/50' alt='placeholder img'/>
-                            <p>{testimonial}</p>
-                        </div>
-                    ))} */}
                 </CardContent>
             </ PageCard>
             </Container>

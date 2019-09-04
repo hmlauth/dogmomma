@@ -5,15 +5,9 @@ import { Carousel } from 'react-responsive-carousel';
 class MyCarousel extends Component {
     constructor(props) {
         super(props);
-        // Don't call this.setState() here!
         this.state = { 
             testimonials: props.testimonials 
         };
-        // this.handleClick = this.handleClick.bind(this);
-      }
-
-      componentDidMount() {
-          console.log('mounted', this.state)
       }
 
     render() {
@@ -21,7 +15,7 @@ class MyCarousel extends Component {
             <Carousel>
                 {this.state.testimonials.map(item => (
                     <div>
-                        <img src="https://via.placeholder.com/150" />
+                        <img src="https://via.placeholder.com/150" alt='placeholder' />
                         <p className="legend">
                             {item}
                         </p>
