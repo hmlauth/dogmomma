@@ -24,6 +24,9 @@
 14. VALIDATE EMAIL
 
 PRIORITITES:
- -- Carousel for testimonials
- -- Photo for Megs about me
- -- Add description and price tag placeholders for services
+-- Use Grid for all sections to prep for md - lg screens
+-- Create mock up testimonials
+-- Define services
+-- Share functionality
+-- Set u Meg's gmail account and link to her email
+-- Fix menu icon in full screen setting (low priority)

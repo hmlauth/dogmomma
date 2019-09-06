@@ -8,17 +8,20 @@ import Image from '../Image';
 import {Grid} from '@material-ui/core';
 
 const paragraphs = [
-    "Every since I can remember, Megan has loved animals. While others would kill a spider upon sight, she would calmly pick it up, place it on a neighboring plant and say, 'Live a long life, spider' with the utmost compassion, care and sincerity.", 
-    "She is full of more empathy and energy that most of us combined. If you're looking for someone to love your and care for your animals in your absence, she's your girl.", 
-    "From Lake Forest Park."];
+    "Since the beginning, Megan has loved all animals. While others would kill a spider upon sight, she would calmly pick it up, place it on a neighboring plant and say, 'Live a long life!' with the utmost compassion, care and sincerity.", 
+    "Megan grew up with cats, dogs, birds and chickens.",
+    "She is full of more empathy and energy that most of us combined. If you're looking for someone to love and care for your animals with the same intensity that you do, she's your girl!", 
+    "Megan was born and raised in Lake Forest Park where she currently resides."];
 
 const useStyles = makeStyles(theme => ({
     paragraph: {
         marginTop: '1em'
     },
+    imgItem: {
+        textAlign: 'center'
+    },
     image: {
-        height: '100px', 
-        transform: 'rotate(10deg)', 
+        height: '200px', 
         borderRadius: '25px', 
         border: '1px solid grey'
     }
@@ -31,33 +34,20 @@ export default function Testimonials() {
         <Fragment>
             <Container fluid>
             <PageCard 
-                title='About Me' 
-                subheader=" 'They're so cute!' "
+                title='About Megan' 
+                subheader=' "Live a long life!" '
             >
                 <CardContent>
-                    <Grid container>
-                        <Grid item xs={4}>
+                    <Grid container >
+                        <Grid item sm={12} className={classes.imgItem}>
                             <Image 
-                                src='images/dog_meg_benji.jpeg' 
-                                alt='Picture of Megan with Benji' 
-                                className={classes.image}
-                            />
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Image 
-                                src='images/dog_boating_rusty.jpg' 
+                                src='images/dog_meg_rusty2.jpg' 
                                 alt='Picture of Megan with Rusty' 
                                 className={classes.image}
                             />
                         </Grid>
-                        <Grid item xs={4}>
-                            <Image 
-                                src='images/dog_meg_rusty.jpeg' 
-                                alt='Picture of Megan with Rusty' 
-                                className={classes.image}
-                            />
-                        </Grid>
-                        <Grid item>
+                        <Grid item sm={0} md={1} />
+                        <Grid item sm={12} md={10}>
                             {paragraphs.map(paragraph => (
                                     <Typography 
                                         variant="body2" 
@@ -68,6 +58,7 @@ export default function Testimonials() {
                                     </Typography>
                             ))}  
                         </Grid> 
+                        <Grid item sm={0} md={1} />
                     </Grid>
                 </CardContent>
             </ PageCard>
