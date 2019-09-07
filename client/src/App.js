@@ -5,6 +5,7 @@ import Nav from './Components/NavBar';
 import Section from './Components/Jumbotron';
 import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/styles';
+import {Grid} from '@material-ui/core';
 
 const styles = theme => ({
     "@global": {
@@ -15,11 +16,10 @@ const styles = theme => ({
 });
 
 const useStyles = makeStyles({
-    welcome: {
-        marginTop: '8em',
+    welcome1: {
+        margin: '8em 0 0 0',
         textAlign: 'center',
         paddingTop: '0',
-        height: '500px',
         backgroundColor: '#42413d'
     },
     homeRibbon: {
@@ -38,21 +38,51 @@ const useStyles = makeStyles({
         height: 'auto'
     },
     quoteBox: {
-        fontStyle: 'italic',
-        borderStyle: 'dotted',
-        borderColor: '#2d2e2a',
-        borderWidth: '3pt 0pt 3pt 0pt',
-        width: '100%',
-        position: 'absolute',
-        right: '0'
+        // textAlign: 'center'
+        // fontStyle: 'italic',
+        // borderStyle: 'dotted',
+        // borderColor: '#2d2e2a',
+        // borderWidth: '3pt 0pt 3pt 0pt',
+        // width: '100%',
+        // position: 'absolute',
+        // right: '0'
     },
     quote: {
         fontSize: '1.2em',
-        padding: '2em',
+        // padding: '2em',
         margin: '0',
+    },
+    welcome2: {
+        backgroundColor: '#42413d',
+        padding: '0 4em 0 4em'
+    },
+    welcome2Grid: {
+        justifyContent: 'center'
+    },
+    imgGrid: {
+        textAlign: 'center'
+    },
+    mainImg: {
+        maxWidth: '20em',
+        height: 'auto',
+        borderRadius: '50%',
+        boxShadow: '2px -2px 10px 4px #777',
+
     },
     services: {
         backgroundColor: '#F1DBD5'
+    },
+    paws: {
+        color: '#ff6d6d'
+    },
+    itive: {
+        color: '#F8B4B4'
+    },
+    quoteBracket: {
+        fontSize: '2em'
+    },
+    closeQuoteBracket: {
+        textAlign: 'right'
     }
 });
 
@@ -63,21 +93,41 @@ function App() {
       <Fragment>
         <CssBaseline />
         <Nav />
-        <Section className={classes.welcome}>
+        <Section className={classes.welcome1}>
             <ul className={classes.homeRibbon}>
                 {['Home','Services','Reviews','About'].map(section => (
                     <li className={classes.homeRibbonItem}>
-                        <img src='images/tag_clipart.png' className={classes.petTag} />
+                        <img src='images/tag_clipart.png' className={classes.petTag} alt='dig tag'/>
                         <p>{section}</p>
                     </li>
                 ))}
             </ul>
-            <div className={classes.quoteBox}>
-                <p className={classes.quote}>"Everyone thinks they have the best pet. And none of them are wrong."</p>
-            </div>
         </Section>
-        <Section className={classes.services}>
-
+        <Section className={classes.welcome2}>
+        <Grid container spacing={2} className={classes.welcome2Grid}>
+            <Grid item sm={5} className={classes.quoteBox}>
+                <h3><span className={classes.quoteBracket}>"</span></h3>
+                <h3 className={classes.quote}>
+                    <span className={classes.paws}>
+                        Everyone
+                    </span> thinks they have the <span className={classes.itive}>
+                        best pet
+                    </span>. . . 
+                </h3>
+                <h3 className={classes.closeQuoteBracket}>
+                    and <span className={classes.paws}>
+                        all
+                    </span> of them are <span className={classes.itive}>
+                        right
+                    </span>!
+                </h3> 
+                <br />
+                <h3 className={classes.closeQuoteBracket}><span className={classes.quoteBracket}>"</span></h3>
+            </Grid>
+            <Grid item sm={7} className={classes.imgGrid}>
+            <img src='images/dog_boating_rusty.jpg' alt='dog' className={classes.mainImg} />
+            </Grid>
+        </Grid>
         </Section>
       </Fragment>    
   );
