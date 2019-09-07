@@ -4,6 +4,13 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Nav from './Components/NavBar';
 import Section from './Components/Jumbotron';
 import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/styles';
+
+const styles = theme => (
+    '@global': {
+        color: 'white'
+)
+}
 
 const useStyles = makeStyles({
     welcome: {
@@ -47,7 +54,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function App() {
+function App() {
   const classes = useStyles();
 
   return (
@@ -75,5 +82,5 @@ export default function App() {
 }
 
 
-      
+export default withStyles(styles)(App);      
 
