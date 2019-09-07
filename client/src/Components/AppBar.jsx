@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    
+
     '&:focus': {
       outline: 'none'
     }
@@ -41,7 +41,7 @@ export default function DenseAppBar(props) {
           </IconButton>
           <Typography variant="h6" color="inherit">
             <Link to='/' className={classes.custom}>
-                Meg-a-Paw
+                Pawsitive
             </Link>
           </Typography>
         </Toolbar>
