@@ -1,121 +1,75 @@
 import React, { Fragment } from 'react';
-// import NavBar from './Components/NavBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { withStyles } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Nav from './Components/NavBar';
+import Section from './Components/Jumbotron';
 import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ContactIcon from '@material-ui/icons/SupervisedUserCircle';
-import PetsIcon from '@material-ui/icons/Pets';
-import StarIcon from '@material-ui/icons/StarBorderRounded';
-import HomeIcon from '@material-ui/icons/HomeRounded';
-import Image from './Components/Image';
-import AppBar from './Components/AppBar';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Button from 'react-bootstrap/Button';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
-
-const navList = ['About', 'Services', 'Testimonials', 'Contact'];
-const icons = [<HomeIcon />, <PetsIcon />, <StarIcon />, <ContactIcon />];
 
 const useStyles = makeStyles({
-  
+    welcome: {
+        marginTop: '8em',
+        textAlign: 'center',
+        paddingTop: '0',
+        height: '500px',
+        backgroundColor: '#42413d'
+    },
+    homeRibbon: {
+        listStyle: 'none',
+        padding: '0px',
+        margin: '0px',
+        top: '-14px',
+        position: 'relative'
+    },
+    homeRibbonItem: {
+        display: 'inline-block',
+        margin: '1.2em'
+    },
+    petTag: {
+        maxWidth: '10em',
+        height: 'auto'
+    },
+    quoteBox: {
+        fontStyle: 'italic',
+        borderStyle: 'dotted',
+        borderColor: '#2d2e2a',
+        borderWidth: '3pt 0pt 3pt 0pt',
+        width: '100%',
+        position: 'absolute',
+        right: '0'
+    },
+    quote: {
+        fontSize: '1.2em',
+        padding: '2em',
+        margin: '0',
+    },
+    services: {
+        backgroundColor: '#F1DBD5'
+    }
 });
-
-// const styles = theme => ({
-// 	"@global": {
-// 		body: {
-// 			backgroundImage: "url('/images/dog_dalmation_pink.jpeg')",
-// 			backgroundRepeat: "no-repeat",
-// 			backgroundPosition: "center center",
-// 			backgroundSize: "cover",
-// 			backgroundAttachment: "fixed",
-// 			height: "100%"
-// 		},
-// 		html: {
-// 			height: "100%"
-// 		}
-// 	}
-// });
 
 export default function App() {
   const classes = useStyles();
-  
+
   return (
       <Fragment>
         <CssBaseline />
-        <Navbar expand="lg" variant="light" bg="light" >
-            <Container>
-                <Navbar.Brand href="#">Pawsitive</Navbar.Brand>
-            </Container>
-        </Navbar>
-        <Jumbotron>
-            <h1>Welcome!</h1>
-            <p>
-                This is a simple hero unit, a simple jumbotron-style component for calling
-                extra attention to featured content or information.
-            </p>
-            <p>
-                <Button variant="primary">Book Now!</Button>
-            </p>
-        </Jumbotron>
-        <Jumbotron>
-            <p>
-                (blurb)
-            </p>
-            <p>
-            </p>
-        </Jumbotron>
-        <Jumbotron>
-            <h1>Services</h1>
-            <p>
-                This is a simple hero unit, a simple jumbotron-style component for calling
-                extra attention to featured content or information.
-            </p>
-            <p>
-            </p>
-        </Jumbotron>
-        <Jumbotron>
-            <h1>My Furry Friends</h1>
-            <p>
-                This is a simple hero unit, a simple jumbotron-style component for calling
-                extra attention to featured content or information.
-            </p>
-            <p>
-            </p>
-        </Jumbotron>
-        <Jumbotron>
-            <h1>What Pet Owners Say</h1>
-            <p>
-                This is a simple hero unit, a simple jumbotron-style component for calling
-                extra attention to featured content or information.
-            </p>
-            <p>
-            </p>
-        </Jumbotron>
-        <Jumbotron>
-            <h1>About Megan</h1>
-            <p>
-                This is a simple hero unit, a simple jumbotron-style component for calling
-                extra attention to featured content or information.
-            </p>
-            <p>
-            </p>
-        </Jumbotron>
-        <Jumbotron>
-            <h1>Contact</h1>
-            <p>
-                This is a simple hero unit, a simple jumbotron-style component for calling
-                extra attention to featured content or information.
-            </p>
-            <p>
-            </p>
-        </Jumbotron>
+        <Nav />
+        <Section className={classes.welcome}>
+            <ul className={classes.homeRibbon}>
+                {['Home','Services','Reviews','About'].map(section => (
+                    <li className={classes.homeRibbonItem}>
+                        <img src='images/tag_clipart.png' className={classes.petTag} />
+                        <p>{section}</p>
+                    </li>
+                ))}
+            </ul>
+            <div className={classes.quoteBox}>
+                <p className={classes.quote}>"Everyone thinks they have the best pet. And none of them are wrong."</p>
+            </div>
+        </Section>
+        <Section className={classes.services}>
+
+        </Section>
       </Fragment>    
   );
 }
