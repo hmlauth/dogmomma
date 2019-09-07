@@ -4,8 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const useStyles = makeStyles({
     navbar: {
-        backgroundColor: '#2d2e2a',
-        // boxShadow: '2px -2px 10px 4px #777',
+        backgroundColor: 'white',
         position: 'fixed',
         top: '0px',
         width: '100%',
@@ -24,9 +23,14 @@ const useStyles = makeStyles({
 
 export default function Nav() {
     const classes = useStyles();
-
+    const  [state, setState] = React.useState({shrinkNavbar: false})
+    
+    function toggleNavbar() {
+        setState({...state, shrinkNavbar: true})
+    }
+    
     return (
-        <Navbar expand="lg" className={classes.navbar}>
+        <Navbar expand="lg" className={classes.navbar} >
             <h1>
                 <span className={classes.paws}>PAWS</span>
                 <span className={classes.itive}>ITIVE</span>

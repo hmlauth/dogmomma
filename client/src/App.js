@@ -6,21 +6,37 @@ import Section from './Components/Jumbotron';
 import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/styles';
 import {Grid} from '@material-ui/core';
+import {Button} from '@material-ui/core';
 
 const styles = theme => ({
     "@global": {
         body: {
-            color: 'white'
+            color: 'black'
         }
     }
 });
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     welcome1: {
         margin: '8em 0 0 0',
         textAlign: 'center',
         paddingTop: '0',
-        backgroundColor: '#42413d'
+        // backgroundColor: '#42413d',
+        borderRadius: '0'
+    },
+    welcome2: {
+        // backgroundColor: '#42413d',
+        padding: '4em',
+        borderRadius: '0',
+        margin: '0'
+        // backgroundImage: 'linear-gradient(#42413d, #F8B4B4 99%)'
+    },
+    welcome3: {
+        // backgroundColor: '#42413d',
+        padding: '4em',
+        borderRadius: '0',
+        // backgroundImage: 'linear-gradient(#F8B4B4, #fd8e2f 99%)',
+        margin: '0px'
     },
     homeRibbon: {
         listStyle: 'none',
@@ -37,24 +53,10 @@ const useStyles = makeStyles({
         maxWidth: '10em',
         height: 'auto'
     },
-    quoteBox: {
-        // textAlign: 'center'
-        // fontStyle: 'italic',
-        // borderStyle: 'dotted',
-        // borderColor: '#2d2e2a',
-        // borderWidth: '3pt 0pt 3pt 0pt',
-        // width: '100%',
-        // position: 'absolute',
-        // right: '0'
-    },
     quote: {
         fontSize: '1.2em',
         // padding: '2em',
         margin: '0',
-    },
-    welcome2: {
-        backgroundColor: '#42413d',
-        padding: '0 4em 0 4em'
     },
     welcome2Grid: {
         justifyContent: 'center'
@@ -83,11 +85,18 @@ const useStyles = makeStyles({
     },
     closeQuoteBracket: {
         textAlign: 'right'
+    },
+    buttonGrid: {
+        margin: theme.spacing(1),
+        justifyContent: 'center'
+    },
+    button: {
+        backgroundColor: '#fe9135'
     }
-});
+}));
 
 function App() {
-  const classes = useStyles();
+    const classes = useStyles();
 
   return (
       <Fragment>
@@ -123,11 +132,20 @@ function App() {
                 </h3> 
                 <br />
                 <h3 className={classes.closeQuoteBracket}><span className={classes.quoteBracket}>"</span></h3>
+                
             </Grid>
             <Grid item sm={7} className={classes.imgGrid}>
             <img src='images/dog_boating_rusty.jpg' alt='dog' className={classes.mainImg} />
             </Grid>
         </Grid>
+        <Grid container className={classes.buttonGrid}>
+            <Button variant="contained" color="primary" className={classes.button}>
+                Contact Megan now!
+            </Button>
+        </Grid>
+        </Section>
+        <Section className={classes.welcome3}>
+
         </Section>
       </Fragment>    
   );
