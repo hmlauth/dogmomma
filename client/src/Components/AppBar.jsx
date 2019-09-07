@@ -36,9 +36,7 @@ export default function DenseAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar variant="dense" className={classes.custom}>
-          <IconButton onClick={props.onClick('left', true)} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon className={classes.menuButton}/>
-          </IconButton>
+          
           <Typography variant="h6" color="inherit">
             <Link to='/' className={classes.custom}>
                 Pawsitive
