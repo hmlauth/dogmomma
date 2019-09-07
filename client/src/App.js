@@ -8,7 +8,9 @@ import { withStyles } from '@material-ui/styles';
 
 const styles = theme => ({
     "@global": {
-        color: 'white'
+        body: {
+            color: 'white'
+        }
     }
 });
 
