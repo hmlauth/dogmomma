@@ -6,11 +6,11 @@ import Section from './Components/Jumbotron';
 import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/styles';
 
-const styles = theme => (
-    '@global': {
+const styles = theme => ({
+    "@global": {
         color: 'white'
-)
-}
+    }
+});
 
 const useStyles = makeStyles({
     welcome: {
