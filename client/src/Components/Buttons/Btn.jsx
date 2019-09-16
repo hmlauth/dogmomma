@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SubmitBtn({children}) {
+export default function Btn({children}) {
     const classes = useStyles();
     
     return (
