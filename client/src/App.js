@@ -18,8 +18,6 @@ const styles = theme => ({
 });
 
 const useStyles = makeStyles(theme => ({
-   
-
 
 }));
 
@@ -30,10 +28,7 @@ function App() {
   return (
       <Fragment>
         <CssBaseline />
-        <Nav />
-        <MainSection />
-        <ServicesSection />
-        <Contact />
+       
       </Fragment>    
   );
 }
