@@ -1,3 +1,11 @@
+/*
+
+TODO: pseudo class for first line of about me paragraph?
+TODO: Testimonial section in about me section
+TODO: animated bird
+TODO: 
+
+*/
 body {
     width: -webkit-fill-available;
     background-image: url("../images/closest-structure.jpg");
@@ -26,6 +34,7 @@ body {
     background-color: #ffffff;
     position: relative;
     height: 50em; 
+    padding-bottom: 0rem;
 }
 
 .display-4 {
@@ -59,7 +68,7 @@ body {
 #services {
     /* color: #ff8d4991; */
     /* color: #ff8d496b; */
-    color: #ffffff;
+    color: #ffe0ce
     
 }
 #services-section {
@@ -76,9 +85,30 @@ body {
     background-color: #343a40;
 }
 
-#about-photo {
+
+#about-photo-1 {
     width: inherit;
-    height: -webkit-fill-available;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: rotate(-10deg);
+    /* height: -webkit-fill-available; */
+}
+
+#about-photo-2 {
+    width: inherit;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: rotate(11deg);
+    position: absolute;
+    right: -7em;
+    bottom: -10em;
+}
+
+#about-photo-3 {
+    width: inherit;
+    position: absolute;
+    bottom: -29em;
+    transform: rotate(-5deg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 #contact-img {
@@ -124,5 +154,7 @@ footer {
         height: 45rem;
         /* background-image: url("../images/cat-silouette.jpeg"); */
     }
+
+    /* TODO: Adjust about me section photos */
 }
 

@@ -65,12 +65,47 @@
         <div class="jumbotron jumbotron-fluid section" id="about-section">
             <div class="row">
                 <div class="col">
-                    <img src="assets/images/dog_meg_rusty2.jpg" alt="Megan" id="about-photo">
+                    <div class="row">
+                        <div class="col">
+                            <img src="assets/images/dog_meg_rusty2.jpg" alt="Megan" id="about-photo-1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <img src="assets/images/chickens.jpeg" alt="chickens in garden" id="about-photo-2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <img src="assets/images/aria_rusty.jpeg" alt="cat and dog on counch" id="about-photo-3">
+                        </div>
+                    </div>
+
                 </div>
                 <div class="col">
                     <h1 class="display-4" id="about">
                         ABOUT
                     </h1>
+                    <div class="row">
+                        <div class="col-3">
+
+                        </div>
+                        <div class="col-8 p-3">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                est
+                                laborum.
+                            </p>
+                        </div>
+                        <div class="col-1">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,11 +117,13 @@
             </h1>
             <div class="container">
 
+                <!-- TODO: Add comment like *Can do other services like house cleaning, house watching, errands, etc. -->
             </div>
         </div>
 
         <!-- CONTACT -->
         <div class="jumbotron jumbotron-fluid section" id="contact-section">
+
             <div class="row">
                 <div class="col">
                     <h1 class="display-4" id="contact">
@@ -94,95 +131,137 @@
                     </h1>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <!-- <img src="assets/images/dog-cat-square.jpg" alt="cat and dog cuddling" id="contact-img"> -->
-                    </div>
-                    <div class="col">
-                            <form>
-                                    <div class="form-group row">
-                                        <label for="firstName" class="col-sm-2 col-form-label">
-                                            First Name
+
+            <div class="row">
+                <div class="col-2">
+
+                </div>
+                <div class="col-8 p-0">
+                    <div class="container ml-0 mr-0 p-0">
+                        <form>
+                            <div class="form-group row">
+                                <label for="firstName" class="col-sm-2 col-form-label">
+                                    First Name
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="firstName" placeholder="Jane">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lastName" class="col-sm-2 col-form-label">
+                                    Last Name
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Smith">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-2 col-form-label">
+                                    Email
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="email" placeholder="youremail@youremail.com">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-2">
+                                    Services
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Exercise & Playtime
                                         </label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="firstName" placeholder="Jane">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="lastName" class="col-sm-2 col-form-label">
-                                            Last Name
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Sleep Over
                                         </label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="lastName" placeholder="Smith">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="email" class="col-sm-2 col-form-label">
-                                            Email
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Special Care
                                         </label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="email" placeholder="youremail@youremail.com">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-2">
-                                            Services
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                                <label class="form-check-label" for="gridCheck1">
-                                                    Example checkbox
-                                                </label>
-                                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                                <label class="form-check-label" for="gridCheck1">
-                                                    Example checkbox
-                                                </label>
-                                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                                <label class="form-check-label" for="gridCheck1">
-                                                    Example checkbox
-                                                </label>
-                                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                                <label class="form-check-label" for="gridCheck1">
-                                                    Example checkbox
-                                                </label>
-                                            </div>
-                                        </div>
-                
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">
-                                            Anything else I should know?
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Chauffer
                                         </label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Drop-Ins
+                                        </label>
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Other
+                                        </label>
                                     </div>
-                                    <div class="form-group row" style="text-align: right">
-                                        <div class="col">
-                                            <button type="submit" class="btn btn-primary">
-                                                Submit
-                                            </button>
-                                        </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-2">
+                                    Animal
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Dog
+                                        </label>
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Cat
+                                        </label>
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Bird
+                                        </label>
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Other
+                                        </label>
                                     </div>
-                                </form>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="animal-name" class="col-sm-3 col-form-label">
+                                    Animal Name(s)
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="animal-name" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">
+                                    Anything else I should know?
+                                </label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="form-group row" style="text-align: right">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                
+                <div class="col-2">
 
-
-                
-
+                </div>
             </div>
 
         </div>
     </div>
     </div>
+    </div>
 
     <!-- FOOTER -->
-    <footer class="">
-        <!-- <div class="container">
-
-    </div> -->
+    <footer>
+        <div class="row">
+                <div class="col">
+                    <img src="./assets/images/dog-cat-long.jpg" alt="dog looking up" style="width: inherit;">
+                </div>
+            </div>
     </footer>
 
 
