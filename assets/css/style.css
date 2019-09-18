@@ -33,8 +33,10 @@ body {
     padding-top: 0rem;
     background-color: #ffffff;
     position: relative;
-    height: 50em; 
+    height: 60em; 
     padding-bottom: 0rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .display-4 {
@@ -44,7 +46,10 @@ body {
     /* font-size: 10.5rem; */
     font-size: 12.5rem;
 }
-
+#primary-phone {
+    /* background-color: #ff617d; */
+    background-color: #fbb1c2;
+}
 #primary-section {
     height: 55rem;
     margin-top: 8rem;
@@ -73,7 +78,8 @@ body {
 }
 #services-section {
     /* background-color: #ff8d496b; */
-    background-color: #ffc5a3;
+    /* background-color: #ffc5a3; */
+    background-color: #ffffff;
 }
 
 #contact {
@@ -116,9 +122,59 @@ body {
     border-radius: 50%;
 }
 
+#submit {
+    background-color: #343a40;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#submit:hover {
+    background-color: #343a40;
+    box-shadow: none;
+}
+
+#submit:active {
+    background-color: #fce7ec;
+
+}
+
+.form-control:focus {
+    border-color: #ff8fa9;
+    box-shadow: inset 1px 1px 0px 0px #fce7ec, 0 0 8px #ffffff;
+  }
+
+#about-paragraph {
+    font-size: 1.5em;
+    font-family: 'Indie Flower', cursive;
+}
+/* 9 19 30 -3 */
+.service-photo-1 {
+    top: 9em;
+    transform: rotate(-4deg);
+}
+.service-photo-2 {
+    top: 19em;
+    transform: rotate(9deg);
+}
+.service-photo-3 {
+    top: 30em;
+    transform: rotate(-15deg);
+}
+.service-photo-4 {
+    top: -3em;
+    transform: rotate(15deg);
+}
+.service-photo {
+    width: inherit;
+    position: absolute;
+}
+
 /* FORM */
 form {
-    background-color: white;
+    /* background-color: white; */
+    color: white;
+    background-color: #4c5156;
     padding: 2em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -153,6 +209,14 @@ footer {
     #primary-section  {
         height: 45rem;
         /* background-image: url("../images/cat-silouette.jpeg"); */
+    }
+
+    #about-photo-2 {
+        bottom: -12em;
+    }
+
+    #about-photo-3 {
+        bottom: -34em;
     }
 
     /* TODO: Adjust about me section photos */
