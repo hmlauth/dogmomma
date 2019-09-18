@@ -187,11 +187,23 @@ form {
 }
 
 /* MEDIA QUERIES */
+
 /* body {
     width: fit-content;
     background-size: auto;
 } */
 
+@media (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .display-4.h1 {
+        font-size: 5.5rem;
+    }
+}
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
     body {
@@ -213,7 +225,7 @@ form {
     }
 
     .display-4 {
-        font-size: 10.5rem;
+        font-size: 5.5rem;
     }
 
     #about-paragraph {
@@ -241,4 +253,5 @@ form {
     .service-photo {
         width: 100%;
     }
+
  }
