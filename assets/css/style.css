@@ -3,31 +3,34 @@
 TODO: pseudo class for first line of about me paragraph?
 TODO: Testimonial section in about me section
 TODO: animated bird
-TODO: 
+TODO: Increase site of phone numbers on hover
+TODO: Mobile responsive
 
 */
 body {
     width: -webkit-fill-available;
     background-image: url("../images/closest-structure.jpg");
       /* Full height */
-  height: 100%;
+    height: 100%;
 
-  /* Center and scale the image nicely */
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+    /* Center and scale the image nicely */
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    /* For Bootstrap Scrollspy */
+    position: relative;
 
 }
 
-.col {
-    padding: 0 5px 0 0;
+.container-fluid {
+    width: fit-content; 
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0;
+    /* /* margin-left: auto; */
 }
-
-.jumbotron {
-    margin: 0px;
-}
-
 /* SECTIONS */
 .section {
     padding-top: 0rem;
@@ -43,13 +46,9 @@ body {
     font-family: 'Bowlby One', cursive;
     margin: 0px;
     z-index: -1;
-    /* font-size: 10.5rem; */
     font-size: 12.5rem;
 }
-#primary-phone {
-    /* background-color: #ff617d; */
-    background-color: #fbb1c2;
-}
+
 #primary-section {
     height: 55rem;
     margin-top: 8rem;
@@ -70,21 +69,21 @@ body {
     float: right;
 }
 
+    #about-paragraph {
+        font-size: 1.5em;
+        font-family: 'Indie Flower', cursive;
+    }
+
 #services {
     /* color: #ff8d4991; */
     /* color: #ff8d496b; */
     color: #ffe0ce
-    
 }
 #services-section {
     /* background-color: #ff8d496b; */
     /* background-color: #ffc5a3; */
     background-color: #ffffff;
-}
-
-#contact {
-    text-align: center;
-    color: #6064698a;
+    overflow: hidden;
 }
 
 #contact-section {
@@ -92,63 +91,37 @@ body {
 }
 
 
-#about-photo-1 {
-    width: inherit;
+/* CONTACT SECTION */
+#contact {
+    text-align: center;
+    color: #6064698a;
+}
+
+/* ABOUT SECTION IMGS */
+.about-photo {
+    position: absolute;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.about-photo-1 {
     transform: rotate(-10deg);
-    /* height: -webkit-fill-available; */
+    top: -15em;
+    width: 120%;
 }
 
-#about-photo-2 {
-    width: inherit;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transform: rotate(11deg);
-    position: absolute;
-    right: -7em;
-    bottom: -10em;
+.about-photo-2 {
+    transform: rotate(7deg);
+    width: 130%;
+    right: -11em;
+    bottom: -5em;
 }
 
-#about-photo-3 {
-    width: inherit;
-    position: absolute;
-    bottom: -29em;
-    transform: rotate(-5deg);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+.about-photo-3 {
+    width: 150%;
+    bottom: -31em;
+    transform: rotate(-11deg);
 }
 
-#contact-img {
-    width: 75%;
-    border-radius: 50%;
-}
-
-#submit {
-    background-color: #343a40;
-    color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-#submit:hover {
-    background-color: #343a40;
-    box-shadow: none;
-}
-
-#submit:active {
-    background-color: #fce7ec;
-
-}
-
-.form-control:focus {
-    border-color: #ff8fa9;
-    box-shadow: inset 1px 1px 0px 0px #fce7ec, 0 0 8px #ffffff;
-  }
-
-#about-paragraph {
-    font-size: 1.5em;
-    font-family: 'Indie Flower', cursive;
-}
-/* 9 19 30 -3 */
+/* SERVICE SECTION IMAGES */
 .service-photo-1 {
     top: 9em;
     transform: rotate(-4deg);
@@ -170,9 +143,37 @@ body {
     position: absolute;
 }
 
-/* FORM */
+/* BUTTONS */
+#submit {
+    background-color: #343a40;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#submit:hover {
+    background-color: #343a40;
+    box-shadow: none;
+}
+
+#submit:active {
+    background-color: #fce7ec;
+
+}
+
+#primary-phone {
+    /* background-color: #ff617d; */
+    background-color: #fbb1c2;
+    margin-right: 3.2em;
+}
+
+.form-control:focus, #primary-phone:focus {
+    border-color: #ff8fa9;
+    box-shadow: inset 1px 1px 0px 0px #fce7ec, 0 0 8px #ffffff;
+  }
+
+/* CONTACT FORM */
 form {
-    /* background-color: white; */
     color: white;
     background-color: #4c5156;
     padding: 2em;
@@ -180,45 +181,64 @@ form {
 }
 
 /* FOOTER */
-footer {
-    background-color: #ff809d;
-    height: 15rem;
+#footer-image {
+    height: 17em;
+    width: 100%;
 }
 
-  /* MEDIA QUERIES */
-  @media only screen and (max-width: 600px) {
+/* MEDIA QUERIES */
+/* body {
+    width: fit-content;
+    background-size: auto;
+} */
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
     body {
-        width: fit-content;
-        background-size: auto;
+        background-image: url("../images/dog_dalmation_pink.jpeg");
     }
 
-    #primary-section  {
-        text-align: center;
-        height: 45rem;
-        /* background-image: url("../images/cat-silouette.jpeg"); */
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    .navbar-nav {
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-  }
-
-  @media only screen and (max-width: 1024px) {
-    body {
-        width: fit-content;
-        background-size: auto;
+    li.nav-item {
+        margin-right: 1.2em;
     }
 
-    #primary-section  {
-        height: 45rem;
-        /* background-image: url("../images/cat-silouette.jpeg"); */
+    .display-4 {
+        font-size: 10.5rem;
     }
 
-    #about-photo-2 {
-        bottom: -12em;
+    #about-paragraph {
+        padding-right: 5.2em;
     }
 
-    #about-photo-3 {
-        bottom: -34em;
+    .about-photo-2 {
+        transform: rotate(9deg);
+        bottom: -2em;
+        left: 3em;
+        width: 140%;
     }
 
-    /* TODO: Adjust about me section photos */
-}
+    .about-photo-3 {
+        bottom: -27em;
+    }
 
+    .service-photo {
+        width: 130%;
+    }
+ }
+
+ /* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    .service-photo {
+        width: 100%;
+    }
+ }
