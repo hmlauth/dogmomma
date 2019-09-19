@@ -174,6 +174,7 @@ body {
 
 /* CONTACT FORM */
 form {
+    margin-bottom: 2em;
     color: white;
     background-color: #4c5156;
     padding: 2em;
@@ -187,17 +188,44 @@ form {
 }
 
 /* MEDIA QUERIES */
+
 /* body {
     width: fit-content;
     background-size: auto;
 } */
 
+@media (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .display-4.h1 {
+        font-size: 5.5rem;
+    }
+}
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
     body {
         background-image: url("../images/dog_dalmation_pink.jpeg");
     }
+    
+    /* TODO: Hide photos in this query, maybe 1 photo per section */
+    /* How to hide photos/columns in Bootstrap */
+    .image-cols {
+        display: none;
+    }
 
+    .section {
+        text-align: center;
+        height: auto;
+    }
+
+    #contact-info {
+        list-style: none;
+        padding: 0;
+    }
  }
 
 /* Medium devices (tablets, less than 992px) */
@@ -213,11 +241,16 @@ form {
     }
 
     .display-4 {
-        font-size: 10.5rem;
+        font-size: 5.5rem;
     }
 
     #about-paragraph {
-        padding-right: 5.2em;
+        padding-right: 1.2em;
+        text-align: center;
+    }
+
+    .about-photo-1 {
+        top: -7em;
     }
 
     .about-photo-2 {
@@ -228,7 +261,9 @@ form {
     }
 
     .about-photo-3 {
-        bottom: -27em;
+        /* bottom: -27em;  */
+        width: 170%;
+        bottom: -33em;
     }
 
     .service-photo {
@@ -241,4 +276,5 @@ form {
     .service-photo {
         width: 100%;
     }
+
  }
