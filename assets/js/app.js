@@ -1,4 +1,11 @@
-
+// TODO: Create validate input function, not just email
+// Confirm if input in name field - indicate required in HTML
+// Confirm if phone number actually a number - indicate required in HTML
+// Animal name and message not required
+// TODO: Apply roll effect instead of jumping to section
+// TODO: When scolled, show heading of section
+// TODO: Security of email functionality and form
+// TODO: Add thank you message 'Megan will be in contact within 24 hours'
 
 let errorMessage = document.querySelector('#email-error-message');
 let nameInput = document.querySelector('#name');
@@ -8,11 +15,6 @@ let animalNameInput = document.querySelector('#animal-name');
 let messageInput = document.querySelector('#message');
 let submitButton = document.querySelector('#submit');
 
-// TODO: Create validate input function, not just email
-// Confirm if input in name field - indicate required in HTML
-// Confirm if phone number actually a number - indicate required in HTML
-// Animal name and message not required
-
 const validateEmail = email => {
     return email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
 }
@@ -20,8 +22,6 @@ const validateEmail = email => {
 window.addEventListener('DOMContentLoaded', () => {
     
     // Scrollspy
-    // TODO: Apply roll effect instead of jumping to section
-    // TODO: When scolled, show heading of section
     $('body').scrollspy({ target: '#navbar-link' });
 
     submitButton.addEventListener('click', async () => {
@@ -43,6 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
             nameInput.value = '';
             emailInput.value = '';
             animalNameInput.value = '';
+            phoneInput.value = '';
             messageInput.value = '';
 
             // package up inputs and send to server

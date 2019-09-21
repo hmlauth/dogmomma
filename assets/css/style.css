@@ -3,8 +3,8 @@
 TODO: pseudo class for first line of about me paragraph?
 TODO: Testimonial section in about me section
 TODO: animated bird
-TODO: Increase site of phone numbers on hover
-TODO: Mobile responsive
+TODO: Increase size of phone numbers on hover/include functionality so user if click on phone then starts phone call
+TODO: Mobile responsive - make better media queries for images in each section
 
 */
 
@@ -33,7 +33,7 @@ body {
     padding-top: 0rem;
     background-color: #ffffff;
     position: relative;
-    height: 60em; 
+    height: 65em; 
     padding-bottom: 0rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -64,9 +64,16 @@ body {
     text-align: center;
 }
 
+    #nbsp {
+        margin-left: 2em;
+    }
     #about-paragraph {
         font-size: 1.5em;
         font-family: 'Indie Flower', cursive;
+    }
+
+    #about-paragraph::first-line {
+        color: #ff6c86;
     }
 
     /* ABOUT IMGS */
@@ -164,7 +171,12 @@ form {
     width: 100%;
 }
 
+
+
+
 /* MEDIA QUERIES */
+/* https://www.w3schools.com/cssref/css3_pr_mediaquery.asp */
+
 @media (max-width: 540px) {
     .navbar {
         display: flex;
@@ -172,8 +184,20 @@ form {
         justify-content: center;
     }
 
+    .navbar-nav {
+        margin: 0 auto;
+    }
+
     .display-4.h1 {
         font-size: 5.5rem;
+    }
+
+    #primary-phone {
+        margin-right: 0em;
+    }
+
+    .about-photo-1 {
+        display: none;
     }
 }
 /* Small devices (landscape phones, less than 768px) */
@@ -202,17 +226,11 @@ form {
         padding: 0;
     }
 
-    .images {
-        display: none;
-    }
-
-
  }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 960px) { 
     .navbar-nav {
-        margin: auto;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -225,6 +243,9 @@ form {
         font-size: 5.5rem;
     }
 
+    #nbsp {
+        margin-left: 0em;
+    }
     #about-paragraph {
         margin: 0;
         text-align: center;
@@ -256,58 +277,3 @@ form {
 
  }
 
- @media (min-width: 300px) {
-    .about-photo-1 {
-        width: 75%;
-    }
-    li.nav-item {
-        margin-right: 1.2em;
-    }
- }
- @media (min-width: 772px) {
-     .service-photo {
-        width: 75%;
-        right: 5em;
-     }
-     
- }
-
- @media (min-width: 960px) {
-    .service-photo {
-        width: 55%;
-       right: 5em;
-    }
-    
-}
-
-@media (min-width: 970px) {
-    .about-photo-1 {
-        width: 90%;
-        transform: rotate(-10deg);
-    }
-
-    .about-photo-2 {
-        bottom: -23em;
-        right: -5em;
-        z-index: 1;
-        transform: rotate(15deg);
-        width: 59%;
-    }
-    .about-photo-3 {
-        width: 65%;
-        bottom: -30em;
-        transform: rotate(-15deg);
-    }
-}
-
-
-@media (max-width: 969px) {
-
-    .about-photo-1 {
-        width: 100%;
-        transform: rotate(-10deg);
-    }
-    .about-photo-2, .about-photo-3 {
-        display: none;
-    }
-}
