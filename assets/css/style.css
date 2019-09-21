@@ -287,7 +287,7 @@ form {
     }
 
     .about-photo-2 {
-        bottom: -13em;
+        bottom: -23em;
         right: -5em;
         z-index: 1;
         transform: rotate(15deg);
@@ -295,7 +295,7 @@ form {
     }
     .about-photo-3 {
         width: 65%;
-        bottom: -20em;
+        bottom: -30em;
         transform: rotate(-15deg);
     }
 }

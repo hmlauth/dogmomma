@@ -10,18 +10,19 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.post('/api/contact', (req, res) => {
     console.log('this works', req.body);
+
     nodemailer.createTestAccount(async (err, account) => {
         
         const htmlEmail = `
-            <h3>Contact Details</h3>
+            <h3>Message from: ${req.body.name}</h3>
+            <h6>Contact Details:</h6>
             <ul>
-                <li>${req.body.firstName} ${req.body.lastName}</li>
-                <li>${req.body.email}</li>
+                <li>Email: ${req.body.email}</li>
+                <li>Phone Number: ${req.body.phone}</li>
+                <li>Animal Name(s): ${req.body.animalName}</li>
             </ul>
-            <h3>Message</h3>
-            <p>${req.body.message}<p/>
-            <h3>Requested Services</h3>
-            <p>${req.body.services.join(', ')}<p/>
+            <h6>Message</h6>
+            <p>${req.body.message}</p>
         `;
 
         let transporter = nodemailer.createTransport({
@@ -36,7 +37,7 @@ app.post('/api/contact', (req, res) => {
             from: req.body.email, // sender address
             to: process.env.NODEMAILER_USER_EMAIL, // list of receivers
             replyTo: req.body.email,
-            subject: 'DogMomma Inquiry', // Subject line
+            subject: 'MEGAPAWS INQUIRY', // Subject line
             html: htmlEmail // html body
         };
         console.log('mailOptions', mailOptions);
