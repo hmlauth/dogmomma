@@ -1,1 +1,72 @@
 /* 501 to 768px; */
+
+
+/* 300 to 500 */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 601px) 
+  and (max-device-width: 768px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+
+    body {
+        background-size: auto;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-item {
+        margin-left: 1em;
+    }
+
+    #primary-section {
+        height: 45em;
+        text-align: center;
+    }
+
+    .images {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-photo, .service-photo {
+        position: absolute;
+        
+    }
+
+    .service-photo {
+        right: 1em;
+        width: 70%;
+    }
+    .about-photo-1 {
+        width: 65%;
+        top: -40px;
+        transform: rotate(-10deg);
+    }
+
+    /* .about-photo-2, .about-photo-3 {
+        display: none;
+    } */
+    .about-photo-2 {
+        width: 60%;
+        bottom: -190px;
+        transform: rotate(10deg);
+        right: 0px;
+    }
+
+    .about-photo-3 {
+        width: 80%;
+        bottom: -551px;
+        transform: rotate(-8deg);
+    }
+    
+}

@@ -7,44 +7,12 @@
   and (-webkit-min-device-pixel-ratio: 2) {
 
     body {
-        width: fit-content;
+        /* width: fit-content; */
         background-image: url("../images/dog_dalmation_pink.jpeg");
     }
 
     .images {
         display: none;
-    }
-
-    #title {
-        font-size: 3.5rem;
-    }
-    .display-4 {
-        font-size: 4.5rem;
-    }
-
-    #primary-section {
-        height: 30em;
-        text-align: center;
-    }
-
-    #nbsp {
-        margin-left: 0em;
-    }
-
-    .section {
-        text-align: center;
-    }
-
-    #about-section, #services-section {
-        height: auto;
-    }
-
-    #contact-section {
-        height: 50em;
-    }
-
-    #about-paragraph {
-        padding: 2em;
     }
 
     .navbar {
@@ -62,6 +30,39 @@
 
     #primary-phone {
         margin-right: 0em;
+    }
+
+    #primary-section {
+        height: 30em;
+        text-align: center;
+    }
+
+    #title {
+        font-size: 3.5rem;
+    }
+
+    .section {
+        text-align: center;
+    }
+
+    .display-4 {
+        font-size: 4.5rem;
+    }
+
+    #about-section, #services-section {
+        height: auto;
+    }
+
+    #contact-section {
+        height: 50em;
+    }
+
+    #about-paragraph {
+        padding: 2em;
+    }
+
+    #nbsp {
+        margin-left: 0em;
     }
 
     #contact-info {

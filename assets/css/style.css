@@ -9,7 +9,8 @@ TODO: Mobile responsive - make better media queries for images in each section
 */
 
 body {
-    width: -webkit-fill-available;
+    /* width: -webkit-fill-available; */
+    width: fit-content;
     background-image: url("../images/closest-structure.jpg");
       /* Full height */
     height: 100%;
