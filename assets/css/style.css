@@ -174,10 +174,10 @@ form {
 
 
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES
 /* https://www.w3schools.com/cssref/css3_pr_mediaquery.asp */
 
-@media (max-width: 540px) {
+/* @media (max-width: 540px) {
     .navbar {
         display: flex;
         flex-wrap: wrap;
@@ -199,19 +199,19 @@ form {
     .about-photo-1 {
         display: none;
     }
-}
+} */
 /* Small devices (landscape phones, less than 768px) */
-@media (max-width: 720px) { 
-    body {
+/* @media (max-width: 720px) { 
+    body { */
         /* background-image: url("../images/dog_dalmation_pink.jpeg"); */
-        background-image: url("../images/dog_dalmation_pink.jpeg");
+        /* background-image: url("../images/dog_dalmation_pink.jpeg");
         background-size: auto;
         background-position-x: -18em;
     }
-    
+     */
     /* TODO: Hide photos in this query, maybe 1 photo per section */
     /* How to hide photos/columns in Bootstrap */
-
+/* 
     #primary-section {
         height: 25em;
     }
@@ -226,10 +226,10 @@ form {
         padding: 0;
     }
 
- }
+ } */
 
 /* Medium devices (tablets, less than 992px) */
-@media (max-width: 960px) { 
+/* @media (max-width: 960px) { 
     .navbar-nav {
         flex-direction: row;
         justify-content: space-between;
@@ -264,10 +264,10 @@ form {
     form {
         margin: 0;
     }
- }
+ } */
 
  /* Large devices (desktops, less than 1200px) */
-@media (max-width: 1140px) { 
+/* @media (max-width: 1140px) { 
     .service-photo {
         width: 100%;
     }
@@ -275,5 +275,5 @@ form {
         flex-direction: row;
     }
 
- }
+ } */
 
