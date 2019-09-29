@@ -7,6 +7,10 @@ const contactRoutes = require('./routes/contactRoutes.js');
 app.use(bodyParser.json()); // parse form inputs into json
 app.use(bodyParser.urlencoded({extended: false}));
 
+app.get('/', function(req, res){
+    res.render('index.html');
+  });
+
 contactRoutes(app);
 
 const PORT = process.env.PORT || 3001;
