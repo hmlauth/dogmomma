@@ -1,26 +1,39 @@
+<!-- TODO: Add dates input field in contact form -->
+<!-- TODO: New about me section  -->
+<!-- TODO: Prices range from in services section -->
+<!-- TODO: Add favicon -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" /> -->
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/abc3eb8c5d.js"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bowlby+One|Indie+Flower|Livvic|Manjari&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One|Indie+Flower|Livvic|Manjari|Be+Vietnam|Didact+Gothic|Quattrocento|Raleway|Tajawal&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Be+Vietnam|Didact+Gothic|Quattrocento|Raleway|Tajawal&display=swap" rel="stylesheet"> -->
     <!-- BOOTSTRAP LINKS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
-    <title>Pawsitivity</title>
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/2_extra-small.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/3_medium.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/4_large-screen.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/5_extra-large.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/6_super-large.css">
-    <title>Pawsitivity</title>
+    <link rel="stylesheet" type="text/css" href="/css/1_style.css">
+    <link rel="stylesheet" type="text/css" href="/css/2_extra-small.css">
+    <link rel="stylesheet" type="text/css" href="/css/3_medium.css">
+    <link rel="stylesheet" type="text/css" href="/css/4_large-screen.css">
+    <link rel="stylesheet" type="text/css" href="/css/5_extra-large.css">
+    <link rel="stylesheet" type="text/css" href="/css/6_super-large.css">
+
+    <title>Megapaws</title>
 </head>
 
 <body data-spy="scroll" data-target="#navbar-links">
@@ -50,191 +63,200 @@
         </button>
     </nav>
 
+<div class="background-img">
+
     <div class="container" id="primary-section">
         <h1 class="display-1" id="title">
-            PAWSITIVE
+            MEGAPAWS
         </h1>
         <p class="lead" id="subtitle">
             We love them like you do!
         </p>
     </div>
 
-    <div class="container-fluid">
-        <!-- ABOUT -->
-        <div class="section" id="about-section">
+    <!-- ABOUT -->
+    <div class="section" id="about-section">
+        <div class="">
             <div class="row">
-                <div class="col">
+                <!-- <div class="col-sm">
+                    <img src="assets/images/dog_meg_rusty2.jpg" alt="Megan" class="about-photo about-photo-1" id="profile-photo">
+                </div> -->
+                <div class="col-sm">
                     <h1 class="display-4" id="about">
                         ABOUT
                     </h1>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-sm images">
-                    <img src="assets/images/about-photo-2.png" alt="Megan" class="about-photo">
+                    <img src="/images/about-photo-2.png" alt="Megan" class="about-photo">
                 </div>
-                <div class="col-2"></div>
-                <div class="col">
-
-                    <p id='about-paragraph'>
-                        Introducing the one-and-only Megan Lauth - a native Seattlite with a love for animals. Megan
-                        has grown up with cats, dogs, birds and gerbils. She has, and continues to be, a reliable
-                        caretaker for friends and family.
-
-                        Megan was known for even loving spiders and would gently pick them up, place them safely on a
-                        plant and say, "Live a long life, spider."
+                <div class="col-sm col-md-7">
+                    <blockquote class="blockquote mb-0">
+                        <p class='about-paragraph'>
+                            <em>Introducing the one-and-only</em> <br><strong>Megan Lauth</strong>
+                        </p>
+                    </blockquote>
+                    <p class='about-paragraph'>
+                        Since her nascency, Megan's gift to the world has been her empathy and compassion. While most scream at the sight of spider and aim to squash it, Megan sprints to guard it then safely move it out of harm's way, accompanied with a little prayer: 
                     </p>
 
+                    <blockquote class="blockquote mb-0">
+                        <p class='about-paragraph'>
+                            Live a long life, spider!
+                        </p>
+                    </blockquote> 
+
+                    <p class='about-paragraph'>
+                        Megan continues to be the sought out caretaker by friends and family for their precisous pets, plants and property. 
+                    </p>
+                    <blockquote class="blockquote mb-0">
+                        <p class='about-paragraph'>
+                            Megan will love your animals like you do.
+                        </p>
+                    </blockquote> 
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- SERVICES -->
-        <div class="section" id="services-section">
-
-            <h1 class="display-4" id="services">
-                SERVICES
-            </h1>
-            <div class="row">
-                <!-- service section extra space -->
-                <div class="col-1">
-
-                </div>
-                <!-- service section content -->
-                <div class="col-7">
-                    <!-- service 1 -->
-
-                    <!-- item -->
-                    <h3>Exercise</h3>
-                    <p>
-                        30 minutes of play! I come exercise your animal be it playtime at the park, backyard or living
-                        room or a nice walk or run.
-                    </p>
-
-                    <!-- item -->
-                    <h3>Sleep Over</h3>
-                    <p>
-                        Animals miss you when you're gone! I will keep them company be it just company at the house or
-                        some serious snuggles.
-                    </p>
-
-                    <!-- item -->
-                    <h3>Drop-Ins</h3>
-                    <p>
-                        Life gets busy! Let me know what help you need and when. I'll be there for you and your loved
-                        ones.
-                    </p>
-
-                    <!-- item -->
-                    <h3>Special Care</h3>
-                    <p>
-                        Some pets need a little bit extra help be it old age or post-surgery. I will spoon feed them 5
-                        times a day, clean up after them, and all around love and comfort them in their time of need.
-                    </p>
-
-                    <!-- item -->
-                    <h3>Other</h3>
-                    <p>
-                        For additional inquiries or services please contact Megan:
-                        <ul id="contact-info">
-                            <li><a href="#contact">Email</a></li>
-                            <li>(206) 473-8758 (c)</li>
-                            <li>(206) 367-8366 (h)</li>
-                        </ul>
-                    </p>
-
-                </div>
-                <!-- service section photos -->
-                <div class="col-3 offset-sm-1 image-cols">
-                    <img src="./assets/images/dog_fetch.jpeg" alt="" class="service-photo service-photo-1">
-                    <img src="./assets/images/cat_sleep.jpeg" alt="" class="service-photo service-photo-2">
-                    <img src="./assets/images/teddybear.jpeg" alt="" class="service-photo service-photo-3">
-                    <img src="./assets/images/exotic-bird.jpeg" alt="" class="service-photo service-photo-4">
-                </div>
+    <!-- SERVICES -->
+    <div class="section" id="services-section">
+        <div class="row">
+            <div class="col-sm">
+                <h1 class="display-4" id="services">
+                    SERVICES
+                </h1>
             </div>
         </div>
-
-        <!-- CONTACT -->
-        <div class="section" id="contact-section">
-
-            <div class="row">
-                <div class="col">
-                    <h1 class="display-4" id="contact">
-                        CONTACT
-                    </h1>
-                </div>
+        <div class="row">
+            <div class="col-sm m-5">
+                    <div class="row service-row">
+                            <div class="col-sm offset-md-1">
+                                <h3>Exercise</h3>
+                                <p>
+                                    30 minutes of play! I come exercise your animal at your house, for a walk or fun, or a day at the dog park.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row service-row">
+                            <div class="col-sm offset-md-1">
+                                <h3>Sleep Over</h3>
+                                <p>
+                                    Animals miss you when you're gone! I will keep them company at the house whether that be just hanging out or
+                                    some serious snuggles.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row service-row">
+                            <div class="col-sm offset-md-1">
+                                <h3>Drop-Ins</h3>
+                                <p>
+                                    Life gets busy! Let me know what help you need and when. I'll be there for you and your loved ones.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row service-row">
+                            <div class="col-sm offset-md-1">
+                                <h3>Special Care</h3>
+                                <p>
+                                    Some pets need a little bit extra help whether from old age or surgery. I will spoon feed them 5 times a day, clean up after them, and all around love and comfort them in their time of need.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row service-row">
+                            <div class="col-sm offset-md-1">
+                                <h3>Other</h3>
+                                <p>
+                                    For additional inquiries or services please contact Megan:
+                                    <ul id="contact-info">
+                                        <li><a href="#contact">Email</a></li>
+                                        <li>(206) 473-8758 (c)</li>
+                                        <li>(206) 367-8366 (h)</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
             </div>
-
-            <div class="row">
-                <div class="col-2"></div>
-
-                <div class="col-8 p-0">
-                    <div class="container ml-0 mr-0 p-0">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label for="name">
-                                        Full Name
-                                    </label>
-                                    <input type="password" class="form-control" id="name" placeholder="Jane Smith">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label for="phone">
-                                        Phone Number
-                                    </label>
-                                    <input type="number" class="form-control" id="phone" placeholder="555-555-5555">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label for="animal-name">
-                                        Animal Name, Age, Breed(s)
-                                    </label>
-                                    <input type="text" class="form-control" id="animal-name" placeholder="Aria, 6, tuxedo cat">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">
-                                    Message
-                                </label>
-                                <textarea class="form-control" id="message" rows="3"></textarea>
-                            </div>
-                            <div class="form-group text-right">
-                                <button type="submit" class="btn" id="submit">
-                                    Submit
-                                </button>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-
-                <div class="col-2"></div>
+            <div class="col-sm images">
+                <img src="/images/dog_fetch.jpeg" alt="" class="service-photo service-photo-1">
+                <img src="/images/cat_sleep.jpeg" alt="" class="service-photo service-photo-2">
+                <img src="/images/teddybear.jpeg" alt="" class="service-photo service-photo-3">
+                <img src="/images/exotic-bird.jpeg" alt="" class="service-photo service-photo-4">
             </div>
         </div>
+        
+    </div>
 
-        <img src="./assets/images/dog-cat-long.jpg" alt="cat and dog cuddles" id="footer-image">
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section" id="contact-section">
+        <h1 class="display-4" id="contact">
+            CONTACT
+        </h1>
+        <form action="http://localhost:3001/api/contact" method="post">
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="name">
+                        Full Name
+                    </label>
+                    <input type="text" class="form-control" id="name" placeholder="Jane Smith">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                    <span id='email-error-message'></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="phone">
+                        Phone Number
+                    </label>
+                    <input type="text" class="form-control" id="phone" placeholder="555-555-5555">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="animal-name">
+                        Animal Name, Age, Breed(s)
+                    </label>
+                    <input type="text" class="form-control" id="animal-name" placeholder="Aria, 6, tuxedo cat">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">
+                    Message
+                </label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <div class="form-group text-right">
+                <button type="submit" class="btn" id="submit">
+                    Submit
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+    <!-- FOOTER -->
+    <img src="/images/dog-cat-long.jpg" alt="cat and dog cuddles" id="footer-image">
+
     </div>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- BOOTSTRAP LINKS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!-- CUSTOM JAVASCRIPT  -->
-    <script src="assets/js/app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

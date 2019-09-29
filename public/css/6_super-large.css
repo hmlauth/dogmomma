@@ -1,15 +1,13 @@
-/* 601 to 960px; */
-/* And for about-photos screen sizes 768 - 960  */
+/* 1441 to 1660 */
 
-/* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 601px) 
-  and (max-device-width: 960px)
+  and (min-device-width: 1441px) 
+  and (max-device-width: 1660px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
 
     body {
-        background-size: auto;
+        background-size: cover;
     }
 
     .navbar {
@@ -26,12 +24,20 @@
     }
 
     #about-section {
-        height: 70em;
+        height: 80em;
     }
 
     #primary-section {
         height: 45em;
         text-align: center;
+    }
+
+    .service-row {
+        font-size: 1.2em;
+    }
+
+    .service-row {
+        font-size: 1.1em;
     }
 
     .images {
@@ -40,30 +46,33 @@
         justify-content: center;
     }
 
-    .about-photo {
-        top: -70px;
-        width: 90%;
-    }
-    .service-photo {
+    .about-photo, .service-photo {
         position: absolute;
+        
     }
 
     .service-photo {
         right: 1em;
-        width: 70%;
+        width: 50%;
     }
-    
-}
 
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 960px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+    .service-photo-1 {
+        top: 9em;
+    }
+    .service-photo-2 {
+        top: 21em;
+    }
+    .service-photo-3 {
+        top: 33em;
+    }
+    .service-photo-4 {
+        top: -4em;
+    }
 
     .about-photo {
-        top: -50px;
-        width: inherit;
+        top: -100px;
+        width: 92%;
     }
     
 }
+
