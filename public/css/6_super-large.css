@@ -24,12 +24,16 @@
     }
 
     #about-section {
-        height: 70em;
+        height: 80em;
     }
 
     #primary-section {
         height: 45em;
         text-align: center;
+    }
+
+    .service-row {
+        font-size: 1.2em;
     }
 
     .service-row {
@@ -49,7 +53,7 @@
 
     .service-photo {
         right: 1em;
-        width: 55%;
+        width: 50%;
     }
 
     .service-photo-1 {

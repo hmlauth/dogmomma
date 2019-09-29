@@ -41,8 +41,8 @@
     }
 
     .about-photo {
-        top: -70px;
-        width: 90%;
+        top: -90px;
+        width: inherit;
     }
     .service-photo {
         position: absolute;
