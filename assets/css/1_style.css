@@ -1,9 +1,9 @@
 /*
 
-TODO: pseudo class for first line of about me paragraph?
-TODO: Testimonial section in about me section
 TODO: animated bird
-TODO: Increase size of phone numbers on hover/include functionality so user if click on phone then starts phone call
+TODO: Increase size of phone numbers on hover
+TODO: Include functionality so user if click on phone then starts phone call or can text or copies
+TODO: Little circular graphic on small screen so user can click to call
 TODO: Mobile responsive - make better media queries for images in each section
 
 */
@@ -26,6 +26,27 @@ body {
 
 }
 
+h1, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+body {
+    background-size: auto;
+}
+
+.navbar {
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    margin-left: 1em;
+}
+
 .container {
     margin-top: 8em;
 }
@@ -45,6 +66,9 @@ body {
     font-size: 12.5rem;
 }
 
+.about-paragraph, .service-row, form {
+    font-family: 'Raleway', sans-serif;
+}
 /* PRIMARY SECTION */
 #primary-section {
     height: 55rem;
@@ -61,26 +85,27 @@ body {
 
 /* ABOUT SECTION */
 #about {
-    color: #f3a9ba47;
+    /* color: #f3a9ba47; */
+    color: #f3a9ba;
     text-align: center;
 }
 
-    #nbsp {
-        margin-left: 2em;
-    }
-    #about-paragraph {
+    .about-paragraph {
+        padding: 1em 2em;
         font-size: 1.5em;
-        font-family: 'Indie Flower', cursive;
+        text-align: center;
     }
 
-    #about-paragraph::first-line {
+    .about-paragraph::first-line {
         color: #ff6c86;
     }
 
     /* ABOUT IMGS */
     .about-photo {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
         position: absolute;
+        width: inherit;
+        top: -100px;
     }
 
 
@@ -91,10 +116,14 @@ body {
 }
 
     #services {
-        color: #ffe0ce;
+        /* color: #ffe0ce; */
+        color: #ffa977;
         text-align: center;
     }
 
+    .service-row {
+        margin-bottom: 1em;
+    }
     /* SERVICE IMGS */
         .service-photo-1 {
             top: 9em;
@@ -113,6 +142,7 @@ body {
             transform: rotate(15deg);
         }
         .service-photo {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             width: inherit;
             position: absolute;
         }
@@ -159,6 +189,7 @@ body {
 
 /* CONTACT FORM */
 form {
+    font-size: 1.3em;
     margin: 3em;
     color: white;
     background-color: #4c5156;
@@ -171,110 +202,3 @@ form {
     height: 17em;
     width: 100%;
 }
-
-
-
-
-/* MEDIA QUERIES
-/* https://www.w3schools.com/cssref/css3_pr_mediaquery.asp */
-
-/* @media (max-width: 540px) {
-    .navbar {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .navbar-nav {
-        margin: 0 auto;
-    }
-
-    .display-4.h1 {
-        font-size: 5.5rem;
-    }
-
-    #primary-phone {
-        margin-right: 0em;
-    }
-
-    .about-photo-1 {
-        display: none;
-    }
-} */
-/* Small devices (landscape phones, less than 768px) */
-/* @media (max-width: 720px) { 
-    body { */
-        /* background-image: url("../images/dog_dalmation_pink.jpeg"); */
-        /* background-image: url("../images/dog_dalmation_pink.jpeg");
-        background-size: auto;
-        background-position-x: -18em;
-    }
-     */
-    /* TODO: Hide photos in this query, maybe 1 photo per section */
-    /* How to hide photos/columns in Bootstrap */
-/* 
-    #primary-section {
-        height: 25em;
-    }
-
-    .section {
-        text-align: center;
-        height: auto;
-    }
-
-    #contact-info {
-        list-style: none;
-        padding: 0;
-    }
-
- } */
-
-/* Medium devices (tablets, less than 992px) */
-/* @media (max-width: 960px) { 
-    .navbar-nav {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    li.nav-item {
-        margin-right: 1.2em;
-    }
-
-    .display-4 {
-        font-size: 5.5rem;
-    }
-
-    #nbsp {
-        margin-left: 0em;
-    }
-    #about-paragraph {
-        margin: 0;
-        text-align: center;
-    }
-    #about-paragraph, #service-list {
-        padding: 1.3em;
-    }
-
-    .service-photo {
-        width: 100%;
-    }
-
-    .images {
-        top: 4em;
-    }
-    form {
-        margin: 0;
-    }
- } */
-
- /* Large devices (desktops, less than 1200px) */
-/* @media (max-width: 1140px) { 
-    .service-photo {
-        width: 100%;
-    }
-    .navbar-nav {
-        flex-direction: row;
-    }
-
- } */
-

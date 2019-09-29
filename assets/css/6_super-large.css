@@ -1,17 +1,13 @@
-/* 501 to 768px; */
+/* 1441 to 1660 */
 
-
-/* 300 to 500 */
-
-/* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 601px) 
-  and (max-device-width: 768px)
+  and (min-device-width: 1441px) 
+  and (max-device-width: 1660px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
 
     body {
-        background-size: auto;
+        background-size: cover;
     }
 
     .navbar {
@@ -27,9 +23,17 @@
         margin-left: 1em;
     }
 
+    #about-section {
+        height: 70em;
+    }
+
     #primary-section {
         height: 45em;
         text-align: center;
+    }
+
+    .service-row {
+        font-size: 1.1em;
     }
 
     .images {
@@ -45,28 +49,26 @@
 
     .service-photo {
         right: 1em;
-        width: 70%;
-    }
-    .about-photo-1 {
-        width: 65%;
-        top: -40px;
-        transform: rotate(-10deg);
+        width: 55%;
     }
 
-    /* .about-photo-2, .about-photo-3 {
-        display: none;
-    } */
-    .about-photo-2 {
-        width: 60%;
-        bottom: -190px;
-        transform: rotate(10deg);
-        right: 0px;
+    .service-photo-1 {
+        top: 9em;
+    }
+    .service-photo-2 {
+        top: 21em;
+    }
+    .service-photo-3 {
+        top: 33em;
+    }
+    .service-photo-4 {
+        top: -4em;
     }
 
-    .about-photo-3 {
-        width: 80%;
-        bottom: -551px;
-        transform: rotate(-8deg);
+    .about-photo {
+        top: -100px;
+        width: 92%;
     }
     
 }
+

@@ -30,3 +30,10 @@ PRIORITITES:
 -- Share functionality
 -- Set u Meg's gmail account and link to her email
 -- Fix menu icon in full screen setting (low priority)
+
+
+Types of Phones:
+Samsung 8 Note
+Samsung - S9+, 7
+iPhone 6,7,8
+Google Pixel Phone

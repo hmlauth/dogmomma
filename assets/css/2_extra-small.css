@@ -1,4 +1,4 @@
-/* 300 to 500 */
+/* 300 to 600 */
 
 /* Portrait and Landscape */
 @media only screen 
@@ -53,16 +53,12 @@
         height: auto;
     }
 
+    h3 {
+        font-size: 1.9rem;
+    }
+    
     #contact-section {
-        height: 50em;
-    }
-
-    #about-paragraph {
-        padding: 2em;
-    }
-
-    #nbsp {
-        margin-left: 0em;
+        height: 55em;
     }
 
     #contact-info {
