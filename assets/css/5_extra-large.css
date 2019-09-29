@@ -1,0 +1,86 @@
+/* 1201 to 1440 */
+
+@media only screen 
+  and (min-device-width: 1201px) 
+  and (max-device-width: 1440px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+
+    body {
+        background-size: cover;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-item {
+        margin-left: 1em;
+    }
+    
+    #about-section {
+        height: 70em;
+    }
+
+    #primary-section {
+        height: 45em;
+        text-align: center;
+    }
+    
+    .service-row {
+        font-size: 1.1em;
+    }
+
+    .images {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-photo, .service-photo {
+        position: absolute;
+        
+    }
+
+    .service-photo {
+        right: 1em;
+        width: 55%;
+    }
+
+    .service-photo-1 {
+        top: 9em;
+    }
+    .service-photo-2 {
+        top: 21em;
+    }
+    .service-photo-3 {
+        top: 33em;
+    }
+    .service-photo-4 {
+        top: -4em;
+    }
+
+    .about-photo {
+        top: -55px;
+        width: inherit;
+    }
+
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1300px) 
+  and (max-device-width: 1440px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .about-photo {
+        top: -100px;
+        width: 94%;
+    }
+    
+}

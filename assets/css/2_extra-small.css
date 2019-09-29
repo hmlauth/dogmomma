@@ -1,0 +1,68 @@
+/* 300 to 600 */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    body {
+        /* width: fit-content; */
+        background-image: url("../images/dog_dalmation_pink.jpeg");
+    }
+
+    .images {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-item {
+        margin-left: 1em;
+    }
+
+    #primary-phone {
+        margin-right: 0em;
+    }
+
+    #primary-section {
+        height: 30em;
+        text-align: center;
+    }
+
+    #title {
+        font-size: 3.5rem;
+    }
+
+    .section {
+        text-align: center;
+    }
+
+    .display-4 {
+        font-size: 4.5rem;
+    }
+
+    #about-section, #services-section {
+        height: auto;
+    }
+
+    h3 {
+        font-size: 1.9rem;
+    }
+    
+    #contact-section {
+        height: 55em;
+    }
+
+    #contact-info {
+        list-style: none;
+        padding: 0;
+    }
+}
